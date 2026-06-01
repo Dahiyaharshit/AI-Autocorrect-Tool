@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI-Powered Autocorrect Tool</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI-Powered Autocorrect Tool</h1>
+
+    <textarea
+        id="inputText"
+        placeholder="Enter text with spelling or grammar mistakes..."
+    ></textarea>
+
+    <button onclick="correctText()">
+        Correct Text
+    </button>
+
+    <div class="stats">
+        <h3>Total Corrections:
+            <span id="count">0</span>
+        </h3>
+    </div>
+
+    <h3>Corrected Output</h3>
+
+    <div id="output"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
